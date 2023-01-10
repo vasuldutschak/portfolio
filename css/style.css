@@ -1,0 +1,11 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;500;600&display=swap');
+
+/*reset css*/
+*, *:hover, *:active, *:focus {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
