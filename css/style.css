@@ -136,6 +136,7 @@ html {
     max-width: 1268px;
     max-height: 674px;
     display: flex;
+    padding: 10px;
 }
 /*navbar menu*/
 header.header{
@@ -183,5 +184,119 @@ a.menu__link {
 .profile__card{
     position: relative;
     width: 480px;
+    min-height: 674px;;
+    border-radius: 4px;
+    background: #ffffff;
+    box-shadow: 8px 9px 16px -10px rgba(0, 0, 0, 0.61);
+    display: flex;
+    flex-direction: column;
+}
+.profile__card:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
     height: 100%;
+    top: -15px;
+    left: -15px;
+    background: linear-gradient(135deg, rgba(120, 204, 109, 0.4) 0%, rgba(120, 204, 109, 0.01) 100%);
+    border-radius: 4px;
+}
+.profile__card__photo{
+    height: 384px;
+    position: relative;
+    overflow: hidden;
+
+}
+.profile__card__photo:before, .profile__card__photo:after {
+    content: "";
+    position: absolute;
+    left: -25%;
+    bottom: -198px;
+    width: 700px;
+    height: 200px;
+    background: #fff;
+    transform: rotate(12deg);
+    z-index: 2;
+}
+
+.profile__card__photo:after {
+    transform: rotate(-12deg);
+}
+.profile__card__photo img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.profile__card__title{
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 32px;
+    color: #323232;
+    margin-top: 20px;
+    text-align: center;
+}
+.profile__card__subtitle{
+    margin: 10px 0px 16px 0;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.subtitle-typed{
+    color: #78cc6d;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #78cc6d;
+    width: fit-content;
+}
+.profile__card__social{
+    display: flex;
+    justify-content: center;
+    column-gap: 12px;
+    font-size: 20px;
+    flex: 1;
+}
+.profile__card__social a{
+    text-decoration: none;
+    color: #323232;
+    width: 20px;
+    height: 20px;
+    transition: color .3s;
+    font-size: 16px;
+}
+.profile__card__social a:hover,.link__btn:hover {
+    color: #78cc6d;
+}
+.profile__card__links{
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;
+}
+.profile__card__links>*{
+    flex-basis: 50%;
+    text-align: center;
+}
+.link__btn{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: #323232;
+    position: relative;
+    flex-basis: 50%;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    justify-content: center;
+    transition: color .3s;
 }
