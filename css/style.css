@@ -20,6 +20,9 @@ html {
     font-size: 16px;
     color: rgba(100, 100, 100, 1);
 }
+button,input,textarea{
+    font-family: inherit;
+}
 
 /*template css classes*/
 .title {
@@ -56,6 +59,9 @@ html {
 }
 
 .title span {
+    color: #78cc6d;
+}
+.title>span>span{
     color: #323232;
 }
 
@@ -928,6 +934,9 @@ span.swiper-pagination-bullet {
 }
 
 /*blog section*/
+.blog{
+    display: none;
+}
 .blog__card__category {
     color: #666666;
     font-size: 16px;
@@ -959,4 +968,65 @@ span.swiper-pagination-bullet {
 
 .blog.section__container > .content__block {
     margin: 0;
+}
+.contact__map__container{
+    margin: 30px 0;
+    height: 240px;
+    width: 100%;
+}
+.grid__template__cell{
+    display: grid;
+    grid-template: repeat(2,1fr)/repeat(2,1fr);
+    grid-gap: 30px;
+}
+.mb30{
+    margin-bottom: 30px;
+}
+.form__contact{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-top: 30px;
+}
+.form__contact .row{
+    column-gap: 30px;
+}
+.form-group input,.form-group textarea{
+    width: 100%;
+    padding: 0 15px;
+    font-size: 16px;
+    height: 50px;
+    color: #78cc6d;
+    border: 2px solid #eeeeee;
+    transition: all .3s;
+}
+.form-group input::placeholder,.form-group textarea::placeholder{
+    color: #323232;
+}
+.form-group textarea{
+    width: 100%;
+    padding: 15px;
+    height: 94px;
+    resize: none;
+}
+.form-group input:active,.form-group input:focus,.form-group textarea:focus,.form-group textarea:active{
+    border-color: #78cc6d;
+}
+.btn{
+    padding: 0 30px;
+    width: auto;
+    height: 50px;
+    line-height: 50px;
+    background: #eeeeee;
+    border-radius: 4px;
+    align-self: flex-start;
+    transition: color .3s;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+.btn:hover{
+    color: #78cc6d;
+    cursor: pointer;
 }
