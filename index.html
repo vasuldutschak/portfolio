@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfolio</title>
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">-->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
     <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 <body>
 <div class="wrapper">
     <div class="background">
@@ -137,7 +138,7 @@
                 </div>
                 <div class="content__block">
                     <h2 class="title">My<span>Services</span></h2>
-                    <div class="services__container">
+                    <div class="content__container">
                         <div class="row fb50">
                             <div class="col">
                                 <div class="card__template border__bottom">
@@ -319,10 +320,365 @@
                     </div>
                 </div>
             </section>
+            <section class="resume section__container">
+                <div class="content__block">
+                    <h2 class="title">R<span>esume</span></h2>
+                    <div class="content__container">
+                        <div class="row fb50">
+                            <div class="col">
+                                <div class="card__template border__bottom">
+                                    <div class="resume__item">
+                                        <div class="resume__title border__bottom">
+                                            <div class="resume__title__icon"><i class="fa fa-briefcase"></i></div>
+                                            <div class="resume__title__name">EXPERIENCE</div>
+                                        </div>
+                                        <div class="resume__item__content border-line-h">
+                                            <div class="resume__item__date active">2013 - Present</div>
+                                            <div class="resume__item__name">Art Director</div>
+                                            <div class="resume__item__company">Facebook Inc.</div>
+                                            <p class="resume__item__desc">
+                                                Collaborate with creative and development teams on the
+                                                execution of ideas.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card__template border__bottom">
+                                    <div class="resume__item">
+                                        <div class="resume__item__content border-line-h">
+                                            <div class="resume__item__date">2011 - 2012</div>
+                                            <div class="resume__item__name">Front-end Developer</div>
+                                            <div class="resume__item__company">Google Inc.</div>
+                                            <p class="resume__item__desc">
+                                                Monitored technical aspects of the front-end delivery for several
+                                                projects.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card__template">
+                                    <div class="resume__item">
+                                        <div class="resume__item__content">
+                                            <div class="resume__item__date">2009 - 2010</div>
+                                            <div class="resume__item__name">Senior Developer</div>
+                                            <div class="resume__item__company">Abc Inc.</div>
+                                            <p class="resume__item__desc">
+                                                Optimize website performance using latest technology.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row fb50 border__left">
+                            <div class="col">
+                                <div class="card__template border__bottom">
+                                    <div class="resume__item">
+                                        <div class="resume__title border__bottom">
+                                            <div class="resume__title__icon"><i class="fa fa-university"></i></div>
+                                            <div class="resume__title__name">EDUCATION</div>
+                                        </div>
+                                        <div class="resume__item__content border-line-h">
+                                            <div class="resume__item__date">2006 - 2008</div>
+                                            <div class="resume__item__name">Art University</div>
+                                            <div class="resume__item__company">New York</div>
+                                            <p class="resume__item__desc">
+                                                Bachelor's Degree in Computer Science ABC Technical Institute,
+                                                Jefferson, Missouri
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card__template border__bottom">
+                                    <div class="resume__item">
+                                        <div class="resume__item__content border-line-h">
+                                            <div class="resume__item__date">2005 - 2006</div>
+                                            <div class="resume__item__name">Programming Course</div>
+                                            <div class="resume__item__company">Paris</div>
+                                            <p class="resume__item__desc">
+                                                Coursework - Git, WordPress, Javascript, iOS, Android.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card__template">
+                                    <div class="resume__item">
+                                        <div class="resume__item__content border-line-h">
+                                            <div class="resume__item__date">2004 - 2005</div>
+                                            <div class="resume__item__name">Web Design Course</div>
+                                            <div class="resume__item__company">London</div>
+                                            <p class="resume__item__desc">
+                                                Converted Photoshop layouts to web pages using HTML, CSS, and JavaScript
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <h2 class="title">My <span>Skills</span></h2>
+                    <div class="content__container">
+                        <div class="row fb50">
+                            <div class="col">
+                                <div class="card__template">
+                                    <div class="resume__item">
+                                        <div class="resume__title border__bottom">
+                                            <div class="resume__title__icon"><i class="fa fa-paint-brush"></i></div>
+                                            <div class="resume__title__name">DESIGN</div>
+                                        </div>
+                                        <div class="skills__item__content">
+                                            <ul class="skills__list">
+                                                <li class="border__bottom">
+                                                    <div class="skills__list__name">Web Design</div>
+                                                    <div class="skills__list__progress">
+                                                        <div class="skills__list__percentage" style="width: 90%;"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="border__bottom">
+                                                    <div class="skills__list__name">Write Music</div>
+                                                    <div class="skills__list__progress">
+                                                        <div class="skills__list__percentage" style="width: 65%;"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="border__bottom">
+                                                    <div class="skills__list__name">Photoshop</div>
+                                                    <div class="skills__list__progress">
+                                                        <div class="skills__list__percentage" style="width: 75%;"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="skills__list__name">Graphic Design</div>
+                                                    <div class="skills__list__progress">
+                                                        <div class="skills__list__percentage" style="width: 85%;"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card__template">
+                                    <div class="resume__item">
+                                        <div class="resume__title border__bottom">
+                                            <div class="resume__title__icon"><i class="fa fa-code"></i></div>
+                                            <div class="resume__title__name">CODING</div>
+                                        </div>
+                                        <div class="skills__item__content coding__observer">
+                                            <div class="row">
+                                                <div class="skills__item__card fb50">
+                                                    <div class="circular-progress">
+                                                        <span class="progress-value">90%</span>
+                                                    </div>
+                                                    <span class="circular__progress__title">WordPress</span>
+                                                </div>
+                                                <div class="skills__item__card fb50">
+                                                    <div class="circular-progress">
+                                                        <span class="progress-value">75%</span>
+                                                    </div>
+                                                    <span class="circular__progress__title">PHP / MYSQL</span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="skills__item__card fb50">
+                                                    <div class="circular-progress">
+                                                        <span class="progress-value">85%</span>
+                                                    </div>
+                                                    <span class="circular__progress__title">Angular / JavaScript</span>
+                                                </div>
+                                                <div class="skills__item__card fb50">
+                                                    <div class="circular-progress">
+                                                        <span class="progress-value">95%</span>
+                                                    </div>
+                                                    <span class="circular__progress__title">HTML & CSS</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row fb50">
+                            <div class="col">
+                                <div class="card__template border__left">
+                                    <div class="resume__item">
+                                        <div class="resume__title border__bottom">
+                                            <div class="resume__title__icon"><i class="fa fa-flag"></i></div>
+                                            <div class="resume__title__name">LANGUAGES</div>
+                                        </div>
+                                        <div class="skills__item__content">
+                                            <ul class="skills__list">
+                                                <li class="border__bottom">
+                                                    <div class="skills__list__name">English</div>
+                                                    <div class="skills__list__progress">
+                                                        <div class="skills__list__percentage" style="width: 90%;"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="border__bottom">
+                                                    <div class="skills__list__name">German</div>
+                                                    <div class="skills__list__progress">
+                                                        <div class="skills__list__percentage" style="width: 65%;"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="border__bottom">
+                                                    <div class="skills__list__name">Italian</div>
+                                                    <div class="skills__list__progress">
+                                                        <div class="skills__list__percentage" style="width: 15%;"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="skills__list__name">French</div>
+                                                    <div class="skills__list__progress">
+                                                        <div class="skills__list__percentage" style="width: 25%;"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card__template border__left">
+                                    <div class="resume__item">
+                                        <div class="resume__title border__bottom">
+                                            <div class="resume__title__icon"><i class="fa fa-list"></i></div>
+                                            <div class="resume__title__name">KNOWLEDGE</div>
+                                        </div>
+                                        <div class="skills__item__content">
+                                            <ul class="knowledge__list">
+                                                <li>
+                                                    <div class="knowledge__list__name"><i
+                                                            class="fa-sharp fa-solid fa-check"></i>Website hosting
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="knowledge__list__name"><i
+                                                            class="fa-sharp fa-solid fa-check"></i>iOS and android apps
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="knowledge__list__name"><i
+                                                            class="fa-sharp fa-solid fa-check"></i>Create logo design
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="knowledge__list__name"><i
+                                                            class="fa-sharp fa-solid fa-check"></i>Design for print
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="knowledge__list__name"><i
+                                                            class="fa-sharp fa-solid fa-check"></i>Modern and
+                                                        mobile-ready
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="knowledge__list__name"><i
+                                                            class="fa-sharp fa-solid fa-check"></i>Advertising services
+                                                        include
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="knowledge__list__name"><i
+                                                            class="fa-sharp fa-solid fa-check"></i>Graphics and
+                                                        animations
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="knowledge__list__name"><i
+                                                            class="fa-sharp fa-solid fa-check"></i>Search engine
+                                                        marketing
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__block">
+                    <h2 class="title">T<span>estimonials</span></h2>
+                    <div class="testimonials-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="revs__item">
+                                    <p class="revs__item__text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                    <div class="revs__item__user">
+                                        <div class="revs__item__img">
+                                            <img src="img/quoye_user_img.png" alt="Ryan Adlard">
+                                        </div>
+                                        <div class="revs__item__info">
+                                            <div class="revs__item__name">Ryan Adlard</div>
+                                            <div class="revs__item__company">Web Designer</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="revs__item">
+                                    <p class="revs__item__text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                    <div class="revs__item__user">
+                                        <div class="revs__item__img">
+                                            <img src="img/quoye_user_img.png" alt="Ryan Adlard">
+                                        </div>
+                                        <div class="revs__item__info">
+                                            <div class="revs__item__name">Ryan Adlard</div>
+                                            <div class="revs__item__company">Web Designer</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="revs__item">
+                                    <p class="revs__item__text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                    <div class="revs__item__user">
+                                        <div class="revs__item__img">
+                                            <img src="img/quoye_user_img.png" alt="Ryan Adlard">
+                                        </div>
+                                        <div class="revs__item__info">
+                                            <div class="revs__item__name">Ryan Adlard</div>
+                                            <div class="revs__item__company">Web Designer</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/629d6d44cd.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="js/index.js"></script>
+<script>
+    new Swiper('.testimonials-slider', {
+        autoplay:{
+            delay:1500,
+            disableOnInteraction:false
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            type: 'bullets',
+
+        },
+        loop: true,
+    })
+</script>
 </body>
 </html>

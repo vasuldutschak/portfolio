@@ -71,6 +71,7 @@ html {
 .col {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .fb50 {
@@ -350,11 +351,14 @@ a.menu__link {
 }
 
 /*about card*/
+.about{
+    display: none;
+}
 .about:last-child{
     padding-bottom: 0;
 }
 .content__cards__container {
-    overflow-y: scroll;
+    overflow: hidden;
     max-width: 642px;
 
 }
@@ -402,7 +406,7 @@ a.menu__link {
     border-radius: 2px;
 }
 
-.services__container {
+.content__container {
     display: flex;
 }
 
@@ -544,6 +548,7 @@ a.menu__link {
 
 .revs__item {
     margin: 20px 0;
+    margin-bottom: 40px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -610,4 +615,173 @@ a.menu__link {
     color: #999;
     font-weight: 400;
 }
+/*resume section*/
+.resume .content__block:last-child{
+    margin-bottom: 0;
+}
+.resume__title{
+    display:flex;
+    align-items: center;
+    row-gap: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.resume__title__icon{
+    font-size: 28px;
+    color: #78cc6d;
+}
+.resume__title__name{
+    margin-left: 20px;
+    line-height: 14px;
+    color: #323232;
+    font-size: 17px;
+}
+.resume__item {
+}
 
+.resume__title__icon {
+}
+
+.fa {
+}
+
+.fa-briefcase {
+}
+
+.resume__title__name {
+}
+
+.resume__item__content {
+}
+
+.border-line-h {
+}
+.resume__item__date {
+    margin: 0 0 11px 0;
+    padding: 0 5px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #ccc;
+    font-weight: 400;
+    text-transform: none;
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+    max-width: fit-content;
+}
+.resume__item__date.active {
+    border-color: #78cc6d;
+    color: #78cc6d;
+}
+.resume__item__name {
+    font-size: 17px;
+    color: #323232;
+    font-weight: 500;
+}
+
+.resume__item__company {
+    margin: 0 0 11px 0;
+    font-size: 14px;
+    color: #999999;
+    font-weight: 400;
+}
+.resume__item__desc{
+    font-size: 15px;
+    line-height: 1.8em;
+    color: #646464;
+}
+.skills__list li{
+    position: relative;
+    padding: 20px 0;
+}
+.skills__list__name{
+    margin: 0 0 8px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #626262;
+}
+.skills__list__progress{
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background: #d8dbe2;
+}
+.skills__list__percentage{
+    background: #78cc6d;
+    height: 100%;
+}
+.knowledge__list li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.knowledge__list__name{
+    font-size: 14px;
+    line-height: 16px;
+    color: #626262;
+    position: relative;
+}
+.knowledge__list__name i{
+    color: #78cc6d;
+    margin-right: 20px;
+}
+.skills__item__content{
+    display:flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.skills__item__card{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.circular-progress{
+    position: relative;
+    height: 90px;
+    width: 90px;
+    background: conic-gradient(#78cc6d 3.6deg,#eeeeee 0deg);
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+}
+.circular-progress:before{
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+.circular__progress__title{
+    font-size: 14px;
+    line-height: 14px;
+    color: #626262;
+    text-align: center;
+}
+.progress-value{
+    position: relative;
+    line-height: 90px;
+    font-size: 17px;
+    color: #323232;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+}
+.testimonials-slider{
+    overflow: hidden;
+    position: relative;
+}
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #78cc6d;
+    opacity: 1;
+}
+
+span.swiper-pagination-bullet {
+    background-color: #ffffff;
+    opacity: 1;
+    border: #78cc6d 1px solid;
+}
