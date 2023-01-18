@@ -359,7 +359,7 @@ a.menu__link {
 
 /*about card*/
 .about {
-    display: none;
+
 }
 
 .about:last-child {
@@ -368,8 +368,9 @@ a.menu__link {
 
 .content__cards__container {
     overflow: hidden;
-    max-width: 642px;
-
+    position: relative;
+    width: 642px;
+    height: 644px;
 }
 
 .section__container {
@@ -382,6 +383,11 @@ a.menu__link {
     border-bottom-right-radius: 4px;
     padding: 30px;
     align-self: center;
+    position: absolute;
+    transform: translateX(-100%);
+}
+.section__container:nth-child(1){
+    transform: translateX(0%);
 }
 
 .info__list {
@@ -834,7 +840,7 @@ span.swiper-pagination-bullet {
 }
 
 .resume {
-    display: none;
+
 }
 
 /*works section*/
@@ -930,12 +936,12 @@ span.swiper-pagination-bullet {
 }
 
 .works {
-    display: none;
+
 }
 
 /*blog section*/
 .blog{
-    display: none;
+
 }
 .blog__card__category {
     color: #666666;
