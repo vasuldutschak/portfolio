@@ -1030,6 +1030,8 @@
             })
             activeSlide.classList.toggle("active")
             slideToShow.classList.toggle("active")
+            document.querySelector('a.menu__link.active').classList.toggle('active')
+            event.currentTarget.classList.toggle('active')
         })
     })
 </script>
