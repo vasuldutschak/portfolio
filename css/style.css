@@ -1141,3 +1141,6 @@ span.swiper-pagination-bullet {
         row-gap: 20px;
     }
 }
+#about,#blog,#works,#resume,#contacts{
+    scroll-margin: 80px;
+}

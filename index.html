@@ -67,7 +67,7 @@
                         <span class="link__text">Works</span>
                     </a>
                 </li>
-                <li class="menu__item border__right" >
+                <li class="menu__item border__right">
                     <a href="#blog" class="menu__link" data-link="blog">
                         <span class="material-symbols-outlined">forum</span>
                         <span class="link__text">Blog</span>
@@ -118,7 +118,7 @@
             </div>
         </div>
         <div class="content__cards__container">
-            <section data-target="about" class="about section__container active">
+            <section id="about" data-target="about" class="about section__container active">
                 <div class="content__block">
                     <h2 class="title">About<span>Me</span></h2>
                     <div class="row">
@@ -322,7 +322,7 @@
                     </div>
                 </div>
             </section>
-            <section data-target="resume" class="resume section__container">
+            <section id="resume" data-target="resume" class="resume section__container">
                 <div class="content__block">
                     <h2 class="title">R<span>esume</span></h2>
                     <div class="content__container">
@@ -658,7 +658,7 @@
                     </div>
                 </div>
             </section>
-            <section data-target="works" class="works section__container">
+            <section id="works" data-target="works" class="works section__container">
                 <div class="content__block">
                     <h2 class="title df">
                         <span>My<span>Services</span></span>
@@ -813,7 +813,7 @@
                     </div>
                 </div>
             </section>
-            <section data-target="blog" class="blog section__container">
+            <section id="blog" data-target="blog" class="blog section__container">
                 <div class="content__block">
                     <h2 class="title df">
                         <span>B<span>log</span></span>
@@ -919,7 +919,7 @@
                     </div>
                 </div>
             </section>
-            <section data-target="contact" class="contact section__container">
+            <section id="contacts" data-target="contact" class="contact section__container">
                 <div class="content__block">
                     <h2 class="title">
                         <span>Get<span> in Touch</span></span>
@@ -947,17 +947,18 @@
                         <form class="form__contact">
                             <div class="row">
                                 <div class="form-group fb50">
-                                    <input type="text" class="form-control"  aria-describedby="emailHelp"
+                                    <input type="text" class="form-control" aria-describedby="emailHelp"
                                            placeholder="Full Name">
                                 </div>
                                 <div class="form-group fb50">
-                                    <input type="email" class="form-control"  placeholder="Email Address">
+                                    <input type="email" class="form-control" placeholder="Email Address">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <textarea name="message" placeholder="Your Message"></textarea>
                             </div>
-                            <button type="submit" class="btn link__btn">Send Message<i class="fa-solid fa-arrows-turn-right"></i></button>
+                            <button type="submit" class="btn link__btn">Send Message<i
+                                    class="fa-solid fa-arrows-turn-right"></i></button>
                         </form>
                     </div>
                 </div>
@@ -986,7 +987,8 @@
         loop: true,
     })
 
-    const slideControl=document.querySelector(".slider__page__controls")
+    const slideControl = document.querySelector(".slider__page__controls")
+
     /*slideControl.addEventListener('click',(event)=>{
         console.log(event.target)
         const slideToShow=document.querySelector(`[data-target="${event.target.getAttribute("data-link")}"]`)
@@ -1010,32 +1012,48 @@
         slideToShow.classList.toggle("active")
 
     })*/
+    function handleMenuItemOnClick(event) {
+        const slideToShow = document.querySelector(`[data-target="${event.currentTarget.getAttribute("data-link")}"]`)
+        const activeSlide = document.querySelector(".section__container.active")
+        if (activeSlide.getAttribute("data-target") === event.currentTarget.getAttribute("data-link")) return
+        activeSlide.animate([{opacity: 1, transform: 'translateX(0%)'}, {
+            opacity: 0,
+            transform: 'translateX(-100%)'
+        }], {
+            duration: 1000,
+            iterations: 1,
+            easing: 'cubic-bezier(0, 0, 1, 1)',
+            fill: "forwards"
+        })
+        slideToShow.animate([{
+            opacity: 0,
+            transform: 'translateX(-100%)'
+        }, {opacity: 1, transform: 'translateX(0%)'}], {
+            duration: 1000,
+            iterations: 1,
+            easing: 'cubic-bezier(0, 0, 1, 1)',
+            fill: "forwards"
+        })
+        activeSlide.classList.toggle("active")
+        slideToShow.classList.toggle("active")
+        document.querySelector('a.menu__link.active').classList.toggle('active')
+        event.currentTarget.classList.toggle('active')
 
-    document.querySelectorAll('a.menu__link').forEach(el=>{
-        el.addEventListener('click',(event)=>{
-            const slideToShow=document.querySelector(`[data-target="${event.currentTarget.getAttribute("data-link")}"]`)
-            const activeSlide=document.querySelector(".section__container.active")
-            if(activeSlide.getAttribute("data-target")===event.currentTarget.getAttribute("data-link")) return
-            activeSlide.animate([{opacity:1,transform: 'translateX(0%)'},{opacity: 0,
-                transform: 'translateX(-100%)'}],{
-                duration: 1000,
-                iterations: 1,
-                easing: 'cubic-bezier(0, 0, 1, 1)',
-                fill:"forwards"
-            })
-            slideToShow.animate([{opacity: 0,
-                transform: 'translateX(-100%)'},{opacity:1,transform: 'translateX(0%)'}],{
-                duration: 1000,
-                iterations: 1,
-                easing: 'cubic-bezier(0, 0, 1, 1)',
-                fill:"forwards"
-            })
-            activeSlide.classList.toggle("active")
-            slideToShow.classList.toggle("active")
-            document.querySelector('a.menu__link.active').classList.toggle('active')
-            event.currentTarget.classList.toggle('active')
+
+    }
+    document.querySelectorAll('a.menu__link').forEach(el => {
+        el.addEventListener('click', (event)=>{
+            event.preventDefault()
+            if (window.innerWidth < 1260) {
+                document.querySelector(event.currentTarget.getAttribute('href')).scrollIntoView({behavior:"smooth"})
+                document.querySelector('a.menu__link.active').classList.toggle('active')
+                event.currentTarget.classList.toggle('active')
+            }else {
+                handleMenuItemOnClick(event)
+            }
         })
     })
+
 </script>
 </body>
 </html>
